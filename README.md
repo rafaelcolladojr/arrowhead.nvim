@@ -1,6 +1,12 @@
 # arrowhead.nvim
 
-arrowhead.nvim makes converting function definitions between fat arrow (=>) and standard ((){}) a breeze.
+arrowhead.nvim makes converting function definitions between fat arrow and standard notations a breeze.
+
+<BR>
+
+<div align="center">
+<img width="400" src="https://github.com/rafaelcolladojr/arrowhead.nvim/assets/7101404/785cded9-afa4-4a9c-b43b-0c1e577b5b83"/>
+</div>
     
 <BR>
 
