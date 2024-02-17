@@ -96,7 +96,7 @@ local function convert_to_fat_arrow(node, buffno, trailing_char)
 
   local pattern = "^%s*{%s*return%s*(.-)%s*(;-)%s*}"
   -- If the function body ends in a character (most likely a comma), exclude semicolon
-  local replacement = "=> %1" .. (not trailing_char and "%2" or "")
+  local replacement = "=> %1" .. (trailing_char == "" and "%2" or "")
   -- print(vim.inspect(trailing_char))
 
   replace_function_text(node, pattern, replacement, buffno)
@@ -125,15 +125,15 @@ local function convert_function(node)
     local second_named_child = first_named_child:named_child(0)
     -- TODO: Ignore comments
     if second_named_child:type() == 'return_statement' then
-      convert_to_fat_arrow(first_named_child, buffno)
+      convert_to_fat_arrow(first_named_child, buffno, trailing_char)
     else
       error('Unable to convert function to fat arrow')
       return
     end
   elseif first_child_text == '=>' then
-    convert_to_standard(node, buffno, trailing_char)
+    convert_to_standard(node, buffno)
   else
-    print(ts.get_node_text(node, buffno))
+    -- print(ts.get_node_text(node, buffno))
   end
 end
 
