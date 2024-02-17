@@ -1,12 +1,6 @@
 # arrowhead.nvim
 
 arrowhead.nvim makes converting function definitions between fat arrow (=>) and standard ((){}) a breeze.
-
-<div align="center">
-    
-<img width="600" src="https://user-images.githubusercontent.com/7101404/231954108-f0a763d9-b51a-45b0-979b-d44ec29e9cbd.gif">
-    
-</div>
     
 <BR>
 
@@ -14,6 +8,8 @@ arrowhead.nvim makes converting function definitions between fat arrow (=>) and 
 
 This plugin is experimental and has only been tested on Dart (and similar languages) code.
 If you'd like this to work in your preferred language, feel free to submit a feature request. Or better yet: submit a pull request.
+
+<BR>
     
 ## Why does this exist?
 
@@ -31,38 +27,36 @@ Check out the gif above for a clear illustration of what this does!
 Install like any other vim plugin.
 Here are examples using some popular package managers:
 
-<details>
-<summary>packer.nvim</summary>
+### packer.nvim
 
 ```lua
-use 'rafaelcolladojr/arrowhead.nvim'
+use {
+    'rafaelcolladojr/arrowhead.nvim',
+    requires = { {'nvim-treesitter/nvim-treesitter'} }
+    }
 ```
-</details>
 
-<details>
-<summary>lazy.nvim</summary>
+### lazy.nvim
 
 ```lua
 {
-    'rafaelcolladojr/arrowhead.nvim'
+    'rafaelcolladojr/arrowhead.nvim',
+    dependencies = { 'nvim-treesitter' }
 }
 ```
-</details>
 
-<details>
-<summary>vim-plug</summary>
-### vim-plug 
+### vim-plug
 
 ```lua
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'rafaelcolladojr/arrowhead.nvim'
 ```
-</details>
 
 <BR>
 
 ## Usage
 
-Placeholder text
+Coming soon
 
 <BR>
 
