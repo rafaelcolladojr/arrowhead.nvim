@@ -3,7 +3,6 @@ local M = {}
 local ts = vim.treesitter
 local ts_utils = require("nvim-treesitter.ts_utils")
 
---- ChatGPT generated
 local function replace_text_with_newlines(bufnr, start_row, start_col, end_row, end_col, replacement_text)
   -- Split the replacement text into lines
   local replacement_lines = {}
@@ -40,7 +39,7 @@ local function get_trailing_char(bufnr, node)
 
   -- Get the text in the range
   local lines = vim.api.nvim_buf_get_text(bufnr, start_row, start_col, end_row, end_col, {})
-  print(vim.inspect(lines))
+  -- print(vim.inspect(lines))
 
   -- Join the lines to get the full text
   local text_after_node = table.concat(lines, "\n")
@@ -58,8 +57,12 @@ local function get_closest_function(node)
     return nil
   end
 
+  if node:type() == 'function_signature' then
+    node = node:next_sibling()
+  end
+
   --- Is current node a funciton
-  if (node:type() == 'function_body' or node:type() == 'function_expression_body') then
+  if node:type() == 'function_body' or node:type() == 'function_expression_body' then
     return node
   end
 
@@ -91,21 +94,19 @@ end
 ---@param buffno integer
 local function convert_to_fat_arrow(node, buffno, trailing_char)
 
-  local pattern = "^%s*{%s*return%s*(.-)%s*;%s*}"
+  local pattern = "^%s*{%s*return%s*(.-)%s*(;-)%s*}"
   -- If the function body ends in a character (most likely a comma), exclude semicolon
-  local replacement = "=> %1" .. (trailing_char == "" and ";" or "") .. ""
+  local replacement = "=> %1" .. (not trailing_char and "%2" or "")
+  -- print(vim.inspect(trailing_char))
 
   replace_function_text(node, pattern, replacement, buffno)
 end
 
 ---@param node TSNode
 ---@param buffno integer
-local function convert_to_standard(node, buffno, trailing_char)
-  if not trailing_char then
-    trailing_char = ""
-  end
-  local pattern = "^%s*=>%s*(.-)%s*;-%s*$"
-  local replacement = "{ return %1; }"
+local function convert_to_standard(node, buffno)
+  local pattern = "^%s*=>%s*(.-)%s*;-(,-)%s*$"
+  local replacement = "{ return %1; }%2"
 
   replace_function_text(node, pattern, replacement, buffno)
 end
