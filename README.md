@@ -67,7 +67,7 @@ To swap the notation of the function/method under the cursor simply run:
 :lua require('arrowhead').swap_notation()
 ```
 
-### Example
+#### Example
 
 You can set it to a normal mode binding like:
 ```lua
