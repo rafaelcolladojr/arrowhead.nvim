@@ -79,5 +79,5 @@ vim.keymap.set('n', '<leader>ah', ':lua R("arrowhead").swap_notation()<CR>')
 ## TODO
 
 - [x] Basic conversion logic
-- [ ] Ignore comments https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1
+- [ ] Ignore comments (https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1)
 - [ ] Popular language coverage
