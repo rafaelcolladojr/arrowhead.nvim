@@ -1,6 +1,6 @@
 # arrowhead.nvim
 
-:bow_and_arrow: arrowhead.nvim makes converting function definitions between fat arrow and standard notations a breeze.
+:bow_and_arrow: Easily switch between fat arrow and standard function notation.
 
 <BR>
 
