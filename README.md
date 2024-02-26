@@ -11,7 +11,7 @@
 <BR>
 
 > [!WARNING]
-> This plugin is experimental and has only been tested on Dart/Flutter code. If you'd like this to work in your preferred language, feel free to submit a feature request. Or better yet: submit a pull request.
+> This plugin is experimental and has only been tested on Dart/Flutter code. If you'd like this to work in your preferred language, feel free to request it be submitting an issue.
 
 <BR>
     
