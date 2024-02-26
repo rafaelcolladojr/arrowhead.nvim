@@ -10,8 +10,10 @@
     
 <BR>
 
-> [!WARNING]
-> This plugin is experimental and has only been tested on Dart/Flutter code. If you'd like this to work in your preferred language, feel free to request it be submitting an issue.
+> [!NOTE]
+> This plugin is experimental and has only been tested on Flutter/Dart code.
+> 
+> If you'd like this plugin to work for your preferred language, feel free to submit an issue.
 
 <BR>
     
