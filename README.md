@@ -11,7 +11,6 @@
 <BR>
 
 > [!WARNING]
-
 > This plugin is experimental and has only been tested on Dart/Flutter code. If you'd like this to work in your preferred language, feel free to submit a feature request. Or better yet: submit a pull request.
 
 <BR>
@@ -78,5 +77,5 @@ vim.keymap.set('n', '<leader>ah', ':lua R("arrowhead").swap_notation()<CR>')
 ## TODO
 
 - [x] Basic conversion logic
-- [ ] https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1
+- [ ] Ignore comments https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1
 - [ ] Popular language coverage
