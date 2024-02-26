@@ -1,6 +1,6 @@
 # arrowhead.nvim
 
-arrowhead.nvim makes converting function definitions between fat arrow and standard notations a breeze.
+:bow_and_arrow: arrowhead.nvim makes converting function definitions between fat arrow and standard notations a breeze.
 
 <BR>
 
@@ -10,16 +10,15 @@ arrowhead.nvim makes converting function definitions between fat arrow and stand
     
 <BR>
 
-## Warning
+> [!WARNING]
 
-This plugin is experimental and has only been tested on Dart (and similar languages) code.
-If you'd like this to work in your preferred language, feel free to submit a feature request. Or better yet: submit a pull request.
+> This plugin is experimental and has only been tested on Dart/Flutter code. If you'd like this to work in your preferred language, feel free to submit a feature request. Or better yet: submit a pull request.
 
 <BR>
     
 ## Why does this exist?
 
-As a Flutter developer, handling deeply nested function definitions is a regular experience. Regardless of language/framework, needing to convert an auto-generated fat arrow function into a standard, return statement function is a drag.
+As a Flutter developer, handling deeply nested class and function definitions is a regular experience. Regardless of language/framework, needing to convert an auto-generated fat arrow function into a standard, return statement function notation is a drag.
 Manually finding where these definitions end to insert that semicolon and closing brace always proves annoying and tiring.
     
 <BR>
@@ -62,12 +61,22 @@ Plug 'rafaelcolladojr/arrowhead.nvim'
 
 ## Usage
 
-Coming soon
+To swap the notation of the function/method under the cursor simply run:
+```lua
+:lua require('arrowhead').swap_notation()
+```
+
+### Example
+
+You can set it to a normal mode binding like:
+```lua
+vim.keymap.set('n', '<leader>ah', ':lua R("arrowhead").swap_notation()<CR>')
+```
 
 <BR>
 
 ## TODO
 
 - [x] Basic conversion logic
-- [ ] Ignore comments
+- [ ] https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1
 - [ ] Popular language coverage
