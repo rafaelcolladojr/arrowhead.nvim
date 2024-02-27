@@ -1,10 +1,13 @@
-# arrowhead.nvim
-
-:bow_and_arrow: Easily switch between fat arrow and standard function notation.
+<div align="center">
+<h1>:bow_and_arrow: arrowhead</h1>
 
 <BR>
 
-<div align="center">
+Easily switch between fat arrow and standard function notation.
+
+<BR>
+
+
 <img width="400" src="https://github.com/rafaelcolladojr/arrowhead.nvim/assets/7101404/785cded9-afa4-4a9c-b43b-0c1e577b5b83"/>
 </div>
     
