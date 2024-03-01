@@ -23,4 +23,9 @@ M.replace_text_with_newlines = function(bufnr, start_row, start_col, end_row, en
   vim.api.nvim_buf_set_lines(bufnr, start_row, end_row + 1, false, replacement_lines)
 end
 
+M.is_language_supported = function ()
+  local bufnr = vim.api.nvim_get_current_buf()
+  return vim.bo[bufnr].filetype ~= 'dart'
+end
+
 return M
