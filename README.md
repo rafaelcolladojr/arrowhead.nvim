@@ -14,9 +14,9 @@ Easily switch between fat arrow and standard function notation.
 <BR>
 
 > [!NOTE]
-> This plugin is experimental and has only been tested on Flutter/Dart code.
+> This plugin is experimental and currently only supports Flutter/Dart code.
 > 
-> If you'd like this plugin to work for your preferred language, feel free to submit an issue.
+> If you'd like it to work for a specific language, feel free to submit an issue.
 
 <BR>
     
@@ -82,5 +82,5 @@ vim.keymap.set('n', '<leader>ah', ':lua R("arrowhead").swap_notation()<CR>')
 ## TODO
 
 - [x] Basic conversion logic
-- [ ] Ignore comments (https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1)
+- [x] Ignore comments (https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1)
 - [ ] Popular language coverage
