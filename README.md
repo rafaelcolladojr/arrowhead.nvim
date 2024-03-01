@@ -35,30 +35,36 @@ Check out the gif above for a clear illustration of what this does!
 Install like any other vim plugin.
 Here are examples using some popular package managers:
 
-### packer.nvim
+<details>
+<summary>lazy.nvim</summary>
+
+```lua
+{
+    'rafaelcolladojr/arrowhead.nvim',
+     dependencies = { 'nvim-treesitter' }
+}
+```
+</details>
+
+<details>
+<summary>packer.nvim</summary>
 
 ```lua
 use {
     'rafaelcolladojr/arrowhead.nvim',
     requires = { {'nvim-treesitter/nvim-treesitter'} }
-    }
-```
-
-### lazy.nvim
-
-```lua
-{
-    'rafaelcolladojr/arrowhead.nvim',
-    dependencies = { 'nvim-treesitter' }
 }
 ```
+</details>
 
-### vim-plug
-
+<details>
+<summary>vim-plug</summary>
+    
 ```lua
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'rafaelcolladojr/arrowhead.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'rafaelcolladojr/arrowhead.nvim'
 ```
+</details>
 
 <BR>
 
@@ -66,8 +72,11 @@ Plug 'rafaelcolladojr/arrowhead.nvim'
 
 To swap the notation of the function/method under the cursor simply run:
 ```lua
-:lua require('arrowhead').swap_notation()
+:lua require('arrowhead').swap_notation(true)
 ```
+In this case, we're setting the `ignore_comments` parameter to `true`. (This defaults to `false`)
+
+<BR>
 
 #### Example
 
@@ -81,5 +90,6 @@ vim.keymap.set('n', '<leader>ah', ':lua R("arrowhead").swap_notation()<CR>')
 ## TODO
 
 - [x] Basic conversion logic
+- [x] Support functions as arguments
 - [x] Ignore comments (https://github.com/rafaelcolladojr/arrowhead.nvim/issues/1)
 - [ ] Popular language coverage
