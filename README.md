@@ -7,8 +7,7 @@ Easily switch between fat arrow and standard function notation.
 
 <BR>
 
-
-<img width="400" src="https://github.com/rafaelcolladojr/arrowhead.nvim/assets/7101404/785cded9-afa4-4a9c-b43b-0c1e577b5b83"/>
+<img width="400" src="https://github.com/rafaelcolladojr/arrowhead.nvim/assets/7101404/763ebb5b-888c-4285-ac20-96463fe30dcd"/>
 </div>
     
 <BR>
